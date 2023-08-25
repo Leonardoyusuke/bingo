@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export default function Numeros(){
     const [clicados, setClicados] = useState({});
+    const [showBingo, setShowBingo] = useState(false)
     const numberMock = [
         1, 2, 3, 4, 5,
         6, 7, 8, 9, 10, 
@@ -24,6 +25,7 @@ export default function Numeros(){
         71, 72, 73, 74, 
         75]
 
+
         function click(m) {
             if (clicados[m]) {
                 const updatedClicados = { ...clicados };
@@ -35,9 +37,14 @@ export default function Numeros(){
                 setClicados(updatedClicados);
             }
         }
+        function toggleBingo() {
+            setShowBingo(!showBingo);
+        }
 
         function resetClicados() {
             setClicados({});
+            setShowBingo(falsea);
+
         }
     return(
     <div>
@@ -62,15 +69,33 @@ export default function Numeros(){
     
     
     
-    </Div> <Button onClick={resetClicados}>Reset</Button>
+    </Div>
+     <Button onClick={resetClicados}>Reset</Button>
+     <Button1 onClick={toggleBingo}>BINGO</Button1>
+     {showBingo && <Win>BINGO</Win>}
     </div>)
 }
 
+const Win = styled.div`
+    position: fixed;
+    top: 500px;
+    color: red;
+    left: 300px;
+    font-size: 240px;
+
+`
 
 const Button = styled.button`
     width: 100px;
     margin-top: 100px;
     margin-left: 100px;
+    height: 40px;
+`
+const Button1 = styled.button`
+    position: fixed;
+    width: 100px;
+    top: 620px;
+    left:108px;
     height: 40px;
 `
 
