@@ -60,7 +60,7 @@ export default function Numeros(){
         {numberMock.map((m)=>      <Layout
                         onClick={() => click(m)}
                         key={m}
-                        clicado={clicados[m]} // Passando o estado de clicado como prop
+                        clicado={clicados[m]} // Passando o estado de clicado como prop   asdasdasda
                     >
                         {m}
                     </Layout>)}
