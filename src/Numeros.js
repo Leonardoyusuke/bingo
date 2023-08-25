@@ -43,7 +43,7 @@ export default function Numeros(){
 
         function resetClicados() {
             setClicados({});
-            setShowBingo(falsea);
+            setShowBingo(false);
 
         }
     return(
