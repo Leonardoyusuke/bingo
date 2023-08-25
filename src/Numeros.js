@@ -81,6 +81,8 @@ const Win = styled.div`
     top: 500px;
     color: red;
     left: 300px;
+    font-weight: bold;
+
     font-size: 240px;
 
 `
